@@ -1,0 +1,1 @@
+//this is whiksyeQuery.js
