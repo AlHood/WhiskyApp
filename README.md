@@ -13,3 +13,6 @@ can check db with mongo and then view:
 DATABASE NAME : whisky
 
 Collection name: whisky_distilleries
+
+
+API can be viewed on isomnia @ localhost:3000/api/locations ensure steps above have been followed and webpack,nodmon,mongod are running and db has been populated with seeds.
