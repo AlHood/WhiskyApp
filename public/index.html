@@ -4,30 +4,30 @@
 <html>
 <head> 
   <title>WhiskyApp</title>
-  <script src=‘bundle.js’></script>
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Crimson+Text" rel="stylesheet">
   <script src=“https://maps.googleapis.com/maps/api/js“></script>
-   <link rel=“stylesheet” type=“text/css” href=“style.css”>
-
+  <link rel=“stylesheet” type=“text/css” href=“style.css”>
+  <script src=‘bundle.js’></script>
 </head>
 <body>
   <section>
-  
-   <div id="infobar"> 
+    
+   <div class="infobar"> 
      <div id="welcome">
       <h2>Whisky Tango Foxtrot!</h2>
       <p> Description of our App and a wee bit about regions</p>
     </div>
-    <div id="google_btns">
-     <button id="CurrentLocationBtn">Current Location</button>
-     <input id="SearchLocation" placeholder="Enter"/>
-   </div>
-   <div id="bucket_list"></div>
+    
+    <button id="CurrentLocationBtn">Current Location</button>
+    <input id="SearchLocation" placeholder="Enter"/>
+    
+    <div id="bucket_list"></div>
 
-   <div id="progress_bar"></div>
- </div> 
+    <div id="progress_bar"></div>
+  </div> 
 
-  <div id="GoogleMap">GoogleMap</div>
-  </section>
+  <div class="GoogleMap">GoogleMap</div>
+</section>
 
 </body>
 </html>
