@@ -1,6 +1,6 @@
-use whiskey;
+use whisky;
 db.dropDatabase();
-db.whiskey_distilleries.insert([
+db.whisky_distilleries.insert([
 {
   name: "Springbank",
   location: "Longrow, Campbeltown",
