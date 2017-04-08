@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 
 
-router.use('/api/loations', require('./locations'));
+router.use('/api/locations', require('./locations'));
 
 
 
