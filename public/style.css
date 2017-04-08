@@ -1,14 +1,28 @@
 /*// think about expanding the website to mobile screen*/ 
 
-section {
-  
+body {
+  margin: 0px;
 }
-#main_map{
 
+  section {
+     display: flex;
+  }
+  
+  .infobar {
+    flex: 1;
+  }
 
+  .GoogleMap {
+    flex: 2;
+  }
+
+/*#GoogleMap{
+ height: 100vh;
+ width: 70vw;
 }
 
 #infobar{
+  flex:1 ;
   float:left;
   flex-direction: column;
   justify-content: space-between;
@@ -34,4 +48,4 @@ section {
   order: 4;
   flex-grow: 1;
 }
-
+*/
