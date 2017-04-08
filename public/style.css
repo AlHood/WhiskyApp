@@ -1,0 +1,31 @@
+/*// let the flex-blox begin!*/
+
+body {
+  flex-direction: row;
+}
+
+.Infobar{
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Welcome {
+  order:1;
+  flex-grow: 1;
+}
+
+.GoogleBtns{
+  order:2;
+  flex-grow: 1;
+}
+
+.BucketList {
+  order: 3;
+  flex-grow: 1;
+}
+
+.UserProgress {
+  order: 4;
+  flex-grow: 1;
+}
