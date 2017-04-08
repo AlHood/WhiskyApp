@@ -1,10 +1,9 @@
 /*// think about expanding the website to mobile screen*/ 
-
 body {
-  margin: 0px;
+  margin: 1px;
 }
 
-  section {
+section {
      display: flex;
   }
   
@@ -54,7 +53,13 @@ input {
 }
 
 .progress_bar {
+<<<<<<< HEAD
   order: 4;
   flex-grow: 1;
 }
 
+=======
+  order: 5;
+  flex-grow: 1;
+}
+>>>>>>> feature/styling
