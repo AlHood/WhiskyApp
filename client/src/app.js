@@ -3,7 +3,7 @@
 
 // Google Map Stuff
 
-var mapWrapper = function(container, center, zoom){
+var MapWrapper = function(container, center, zoom){
   this.googleMap = new google.maps.Map(container, {
     center: center,
     zoom: zoom
@@ -16,29 +16,22 @@ MapWrapper.prototype = {
       position: coords,
       map: this.googleMap
     });
-
-    var app = function(){
-      var container = document.getElementById("GoogleMap");
-      var center = { lat: , lng:},
-    };
-
-    var zoom = 10;
-
-    var mainMap = new MapWrapper(container, center, zoom);
-
-
-    // ---------------------------------------------------------
-
-var UI = require('./views/ui');
-
-
-
-var app = function() {
-new UI();
-
+  }
 }
 
-
-
+var app = function(){
+  var container = document.getElementById("GoogleMap");
+  var center = {
+    lat: 55.8576092,
+    lng: -4.244469
+  };
+  var zoom = 10;
+  var mainMap = new MapWrapper(container, center, zoom);
+  // mainMap.addMaker({
+  //   lat: 55.8576092,
+  //   lng: -4.244469
+  // });
+};
 
 window.onload = app;
+

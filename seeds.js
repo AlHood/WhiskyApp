@@ -10,8 +10,12 @@ db.whisky_distilleries.insert([
   cost: "£7 per person",
   website: '.',
   image: ".",
-  latitude: 55.425439,
-  longitude: -5.608951
+
+  coords:{
+
+    lat: 55.425439,
+    lng: -5.608951
+  }
 },
 {
   name: "Dalmore",
@@ -22,8 +26,10 @@ db.whisky_distilleries.insert([
   cost: null,
   website: 'https://www.thedalmore.com',
   image: ".",
-  latitude: 57.688252,
-  longitude: -4.239218
+  coords:{
+    lat: 57.688252,
+    lng: -4.239218
+  }
 },
 {
   name: "Talisker",
@@ -34,10 +40,11 @@ db.whisky_distilleries.insert([
   cost: "£7 per person",
   website: 'https://www.discovering-distilleries.com/talisker/',
   image: ".",
-  latitude: 57.302336,
-  longitude: -6.356749
+  coords:{
+    lat: 57.302336,
+    lng: -6.356749
+  }
 },
-
 {
   name: "Highland Park",
   location: "Kirkwall, Orkney.",
@@ -47,8 +54,10 @@ db.whisky_distilleries.insert([
   cost: "£7.50 per person",
   website: 'https://www.highlandparkwhisky.com/',
   image: ".",
-  latitude: 58.973751,
-  longitude: -2.953371
+  coords:{
+    lat: 58.973751,
+    lng: -2.953371
+  }
 },
 {
   name: "Jura",
@@ -59,8 +68,10 @@ db.whisky_distilleries.insert([
   cost: "Distillery tours are £6. No children under eight years of age allowed in production areas.",
   website: 'http://www.jurawhisky.com',
   image: ".",
-  latitude: 55.832908,
-  longitude: -5.950832
+  coords:{
+    lat: 55.832908,
+    lng: -5.950832
+  }
 },
 {
   name: "Arran",
@@ -71,8 +82,10 @@ db.whisky_distilleries.insert([
   cost: "Cost£8.00 Concessions £7.00 Children 8-17 Free ",
   website: 'https://www.arranwhisky.com',
   image: ".",
-  latitude: 55.698241,
-  longitude: -5.275240
+  coords:{
+    lat: 55.698241,
+    lng: -5.275240
+  }
 },
 {
   name: "Tobermory",
@@ -83,8 +96,10 @@ db.whisky_distilleries.insert([
   cost: "£8 per person",
   website: 'http://tobermorydistillery.com',
   image: ".",
-  latitude: 56.620734,
-  longitude: -6.069800
+  coords:{
+    lat: 56.620734,
+    lng: -6.069800
+  }
 }, 
 {
 
@@ -96,9 +111,10 @@ db.whisky_distilleries.insert([
   cost: "£7 per person",
   website: 'http://www.bowmore.com',
   image: ".",
-  latitude: 55.756868,
-  longitude: -6.289846
-  
+  coords:{
+    lat: 55.756868,
+    lng: -6.289846
+  } 
 },
 {
   name: "Ailsa Bay",
@@ -109,8 +125,10 @@ db.whisky_distilleries.insert([
   cost: "£7 per person",
   website: '.',
   image: ".",
-  latitude: null,
-  longitude: null
+  coords:{
+    lat: null,
+    lng: null
+  }
 },
 {
   name: "Glenfiddich",
@@ -121,8 +139,10 @@ db.whisky_distilleries.insert([
   cost: "£10",
   website: 'http://www.glenfiddich.com/distillery/',
   image: ".",
-  latitude: 57.454765,
-  longitude: -3.128660
+  coords:{
+    lat: 57.454765,
+    lng: -3.128660
+  }
 },
 {
   name: "The Macallan",
@@ -133,8 +153,10 @@ db.whisky_distilleries.insert([
   cost: "COST: Price per person - £15",
   website: 'https://www.themacallan.com/visit#',
   image: ".",
-  latitude: 57.484647,
-  longitude: -3.206955
+  coords:{
+    lat: 57.484647,
+    lng: -3.206955
+  }
 },
 {
   name: "Glenlivet",
@@ -145,8 +167,9 @@ db.whisky_distilleries.insert([
   cost: "PRICE: £10.00",
   website: 'https://www.theglenlivet.com',
   image: ".",
-  latitude: 57.343908,
-  longitude: -3.337552
-
+  coords:{
+    lat: 57.343908,
+    lng: -3.337552
+  }
 }
 ]);
