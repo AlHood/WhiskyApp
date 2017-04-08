@@ -18,6 +18,7 @@ p, button {
 }
 
 #GoogleMap{
+  display: flex;
  flex: 2; 
  /*height: 100vh;
  width: 70vw;*/
@@ -25,10 +26,13 @@ p, button {
 }
 
 #infobar{
+  display: flex;
   flex:1 ;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   align-items: center;
+  align-content: stretch;
   background-color: 68686A
 }
 
@@ -53,13 +57,7 @@ input {
 }
 
 .progress_bar {
-<<<<<<< HEAD
-  order: 4;
-  flex-grow: 1;
-}
-
-=======
   order: 5;
   flex-grow: 1;
 }
->>>>>>> feature/styling
+
