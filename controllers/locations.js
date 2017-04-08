@@ -5,13 +5,17 @@ var express = require('express');
 var locationRouter = express.Router();
 var bodyParser = require('body-parser');
 
-locationRouter.get('/:id', function(req, res){
-  res.json({data: locations[req.params.id]});
 
+locationRouter.use(bodyParser.json());
+locationRouter.use(bodyParser.urlencoded({extended: true}));
+
+locationRouter.get('/', function(req, res){
+  res.json(locations);
 });
 
-
 module.exports = locationRouter;
+
+
 
 
 
