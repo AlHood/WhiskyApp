@@ -14,15 +14,17 @@ h2 {
 
 p, button {
   font-family: 'Crimson Text', serif;
-  colour:#FFD700;
+  color:#FFD700;
 }
 
+<<<<<<< HEAD
 #GoogleMap{
   display: flex;
+=======
+#container{
+>>>>>>> feature/styling
  flex: 2; 
- /*height: 100vh;
- width: 70vw;*/
- background-color: 1F5BBB
+ background-color: #1F5BBB
 }
 
 #infobar{
@@ -32,8 +34,12 @@ p, button {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+<<<<<<< HEAD
   align-content: stretch;
   background-color: 68686A
+=======
+  background-color: #68686A
+>>>>>>> feature/styling
 }
 
 .welcome {
@@ -61,3 +67,12 @@ input {
   flex-grow: 1;
 }
 
+<<<<<<< HEAD
+=======
+.GoogleMap {
+/*   flex: 2; 
+   background-color: #1F5BBB*/
+  height: 100vh;
+  width: 70vw;
+}
+>>>>>>> feature/styling
