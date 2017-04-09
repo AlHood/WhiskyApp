@@ -5,6 +5,7 @@ var router = express.Router();
 
 
 router.use('/api/locations', require('./locations'));
+router.use('/api/users', require('./users'));
 
 
 
