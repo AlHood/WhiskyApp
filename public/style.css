@@ -35,12 +35,12 @@ p, button {
   flex-grow: 1;
 }
 
-button {
+.CurrentLocationBtn{
   order:2;
   flex-grow: 1;
 }
 
-input {
+.SearchLocation{
   order: 3;
   flex-grow: 1;
 }
@@ -55,7 +55,7 @@ input {
   flex-grow: 1;
 }
 
-.GoogleMap {
+#GoogleMap {
 /*   flex: 2; 
    background-color: #1F5BBB*/
   height: 100vh;
