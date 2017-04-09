@@ -18,6 +18,16 @@ Collection name: whisky_distilleries
 API can be viewed on isomnia @ localhost:3000/api/locations ensure steps above have been followed and webpack,nodmon,mongod are running and db has been populated with seeds.
 
 
+locations can be found by ObectId, use above instructions to find all, grab an object id, will look something like 
+
+58ea5f28c64230cb3bbf2c24
+
+you can then use isomia to get a single location localhost:3000/api/locations/58ea5f28c64230cb3bbf2c24
+
+remember to reseed your db if you haven't already mongo < seeds.js
+
+this may be refactored later to use place_id
+
 
 # Users are now available via API: 
 
