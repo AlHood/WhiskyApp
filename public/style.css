@@ -14,14 +14,12 @@ h2 {
 
 p, button {
   font-family: 'Crimson Text', serif;
-  colour:#FFD700;
+  color:#FFD700;
 }
 
-#GoogleMap{
+#container{
  flex: 2; 
- /*height: 100vh;
- width: 70vw;*/
- background-color: 1F5BBB
+ background-color: #1F5BBB
 }
 
 #infobar{
@@ -29,7 +27,7 @@ p, button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: 68686A
+  background-color: #68686A
 }
 
 .welcome {
@@ -55,4 +53,11 @@ input {
 .progress_bar {
   order: 5;
   flex-grow: 1;
+}
+
+.GoogleMap {
+/*   flex: 2; 
+   background-color: #1F5BBB*/
+  height: 100vh;
+  width: 70vw;
 }
