@@ -17,6 +17,16 @@ UserQuery.prototype = {
         onQueryFinished(docs);
       });
     });
+  },
+  //this will find a user by object id.
+  findById: function(onQueryFinished, id) {
+    console.log({'_id':new ObjectID(id)})
+    MongoClient.connect(this.url, function(err, db){
+      var collection = db.collection('whisky_users');
+      collection.find({'_id': new ObjectID(id)}).toArray(function(err, docs){
+        onQueryFinished(docs[0]);
+      });
+    });
   }
 
 };
