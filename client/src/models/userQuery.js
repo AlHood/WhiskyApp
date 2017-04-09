@@ -27,6 +27,23 @@ UserQuery.prototype = {
         onQueryFinished(docs[0]);
       });
     });
+  },
+  //this will update a user based on objectid, only pass values to update, any null values will apply to db.
+  updateUser: function(onQueryFinished, id, valueToUpdate) {
+    //leaving console.logs here untill front end is built and passing values. check result on nodemon
+    console.log('Updating user: ' + id);
+    console.log("with value: " + JSON.stringify(valueToUpdate));
+    
+    MongoClient.connect(this.url, function(err, db){
+      var collection = db.collection('whisky_users');
+      collection.updateOne({'_id':new ObjectID(id)}, {$set: valueToUpdate}, {safe:true},function(err, docs) {
+        if (err) {
+            onQueryFinished({'error':'something went wrong'});
+        } else {
+            onQueryFinished(docs[0]);
+        }
+      });
+    })
   }
 
 };
