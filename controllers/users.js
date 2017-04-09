@@ -16,4 +16,15 @@ userRouter.get('/', function(req, res){
   });
 });
 
+//this is route to get a user by object id, logic is handled in userQuery model.
+userRouter.get('/:id',function(req, res){
+  var id = req.params.id;
+  //leaving console log here till front end is upand running.
+  console.log('Retrieving user: ' + id);
+  query.findById(function(results){
+    res.json(results);
+  }, id);
+});
+
+
 module.exports = userRouter;
