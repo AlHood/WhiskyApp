@@ -17,12 +17,9 @@ p, button {
   color:#FFD700;
 }
 
-<<<<<<< HEAD
-#GoogleMap{
-  display: flex;
-=======
+
 #container{
->>>>>>> feature/styling
+  display: flex;
  flex: 2; 
  background-color: #1F5BBB
 }
@@ -34,12 +31,8 @@ p, button {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-<<<<<<< HEAD
   align-content: stretch;
-  background-color: 68686A
-=======
   background-color: #68686A
->>>>>>> feature/styling
 }
 
 .welcome {
@@ -67,12 +60,10 @@ input {
   flex-grow: 1;
 }
 
-<<<<<<< HEAD
-=======
 .GoogleMap {
 /*   flex: 2; 
    background-color: #1F5BBB*/
   height: 100vh;
   width: 70vw;
 }
->>>>>>> feature/styling
+
