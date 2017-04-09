@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head> 
-  <title>WhiskyApp</title>
+  <title>Whisky Tango Foxtrot!</title>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Crimson+Text" rel="stylesheet">
@@ -12,16 +12,17 @@
 </head>
 <body>
   <section>
-
-    
-   <div class="infobar"> 
+ 
+   <div id="infobar"> 
      <div id="welcome">
-      <h2>Whisky Tango Foxtrot!</h2>
-      <p> Description of our App and a wee bit about regions</p>
+      <h1>Find Local Whisky Distilleries</h1>
+      <p> Whether a whisky virgin or a connoisseur of Scotland's dram, we'll help you locate your closest distillery. Simple choose an option below to start your journey... </p>
     </div>
     
-     <button id="CurrentLocationBtn">Current Location</button>
-     <input id="SearchLocation" placeholder="Enter"/>
+     <button id="CurrentLocationBtn" type="submit">Current Location</button>
+
+
+     <input id="SearchLocation" placeholder="Search" onclick="newMap()"/>
    
    <div id="bucket_list"></div>
 
@@ -29,9 +30,7 @@
     <div id="progress_bar"></div>
   </div> 
 
-  <div class="container">
   <div id="GoogleMap">GoogleMap</div>
-  </div>
 </section>
 
 

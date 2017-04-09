@@ -1,28 +1,69 @@
 /*// think about expanding the website to mobile screen*/ 
 body {
   margin: 1px;
+  background-color: #6B7283;
 }
 
 section {
      display: flex;
   }
   
-h2 {
+h1 {
   font-family: 'Berkshire Swash', cursive;
-  color: #FFD700
+  color: #FFD700;
+  font-size: 28px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
-p, button {
+p {
   font-family: 'Crimson Text', serif;
   color:#FFD700;
+  font-size: 17px;
+  margin-bottom: 15px;
+  padding: 10px;
 }
 
-
-#container{
-  display: flex;
- flex: 2; 
- background-color: #1F5BBB
+button {
+  font-family: 'Crimson Text', serif;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #FFD700;
+  font-style: 17px;
+  border-radius: 10px;
+  padding: 1em 3em;
+  border-size: 1px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
+
+button: hover {
+  background-color: transparent;
+  border: 0.15em #FFD700 solid;
+  color: #FFD700;
+}
+
+button: active {
+  background-color: transparent;
+  border: 0.15em #329bd8 solid;
+  color: #329bd8;
+}
+
+input {
+font-family: 'Crimson Text', serif;
+color: black;
+text-decoration: none;
+text-transform: uppercase;
+background-color: white;
+font-style: 17px;
+border-radius: 10px;
+padding: 1em 3em;
+border-size: 1px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
 
 #infobar{
   display: flex;
@@ -32,7 +73,6 @@ p, button {
   justify-content: flex-start;
   align-items: center;
   align-content: stretch;
-  background-color: #68686A
 }
 
 .welcome {
@@ -42,7 +82,7 @@ p, button {
 
 .CurrentLocationBtn{
   order:2;
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 .SearchLocation{
@@ -61,9 +101,9 @@ p, button {
 }
 
 #GoogleMap {
-/*   flex: 2; 
-   background-color: #1F5BBB*/
   height: 100vh;
   width: 70vw;
+  display: flex;
+  flex: 2; 
 }
 
