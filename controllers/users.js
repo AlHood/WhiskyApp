@@ -26,5 +26,12 @@ userRouter.get('/:id',function(req, res){
   }, id);
 });
 
+//this is route UPDATE a user based on their object id logic is handled in userQuery model.
+userRouter.put('/:id', function(req,res){
+  var id = req.params.id;
+  var user = req.body;
+    query.updateUser(function(results){
+      res.json(user);}, id,user);
+});
 
 module.exports = userRouter;
