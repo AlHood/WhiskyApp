@@ -1,3 +1,4 @@
+//need coords for one that is missing, think getting the place_id might also be handy for all locations.
 use whisky;
 db.dropDatabase();
 db.whisky_distilleries.insert([
@@ -173,3 +174,24 @@ db.whisky_distilleries.insert([
   }
 }
 ]);
+
+use users;
+db.dropDatabase();
+db.whisky_users.insert([
+{
+  name: "Colin",
+  bucket_list: [],
+  visited_list: []
+},{
+  name: "Ruth",
+  bucket_list: [],
+  visited_list: []
+},{
+  name: "Chris",
+  bucket_list: [],
+  visited_list: []
+},{
+  name: "Alastair",
+  bucket_list: [],
+  visited_list: []
+}])
