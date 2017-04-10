@@ -16,6 +16,10 @@ MapWrapper.prototype = {
       position: coords,
       map: this.googleMap
     });
+    google.maps.event.addListener(marker, "click", function(){
+      console.log("clicked");
+
+    },this);
   }
 }
 //this function will make a call to our api, get all distilleries and use the callback provide to drop markers for them all on the mainmap.
