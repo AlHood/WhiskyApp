@@ -48,6 +48,19 @@ assert.equal("123456", testUser.bucket_list[0] );
 
     })
 
+  it('able to add multipl entries to visited list', function() {
+
+      testUser.addBucket("123456");
+      testUser.addVisited("123456");
+      testUser.addBucket("4567");
+      testUser.addVisited("4567");
+
+      assert.equal("123456", testUser.visited_list[0]);
+      assert.equal("4567", testUser.visited_list[1]);
+      assert.deepEqual([], testUser.bucket_list);
+
+    })
+
   it('can remove from visited', function() {
 
       testUser.addBucket("123456");
@@ -56,6 +69,20 @@ assert.equal("123456", testUser.bucket_list[0] );
 
 
       assert.equal(0, testUser.visited_list.length);
+
+    })
+
+  it('multiple additions', function() {
+
+      testUser.addBucket("123456");
+      testUser.addBucket("4567");
+      testUser.addVisited("123456");
+      testUser.addVisited("ABCD");
+      testUser.addVisited("4567");
+
+      testUser.removeVisited("123456");
+
+      assert.equal(1, testUser.visited_list.length);
 
     })
 
