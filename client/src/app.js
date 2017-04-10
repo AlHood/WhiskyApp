@@ -11,14 +11,25 @@ var MapWrapper = function(container, center, zoom){
 };
 
 MapWrapper.prototype = {
-  addMaker: function(coords, content){
+  addMarker: function(distillery){
     var marker = new google.maps.Marker({
-      position: coords,
+      position: distillery.coords,
       map: this.googleMap
     });
-    var infoWindow = new google.maps.InfoWindow(content);
+
+    var div = document.createElement("div");
+    var header = document.createElement('h1');
+    var button = document.createElement("button")
+    // this will be used to push id to customers array.
+    button.onclick = function(){console.log(distillery.name)}
+    header.innerText = distillery.name;
+    button.id = distillery._id;
+    div.appendChild(header);
+    div.appendChild(button);
+
+    var infoWindow = new google.maps.InfoWindow({content: div});
     google.maps.event.addListener(marker, "click", function(){
-      console.log(content);
+      // console.log(content);
       infoWindow.open(this.googleMap, marker);
 
     },this);
@@ -34,8 +45,9 @@ var makeRequest = function(url, callback){
     }
     var jsonString = this.responseText;
     var whisky_distilleries = JSON.parse(jsonString);
+    
     for(distillery of whisky_distilleries){
-      callback(distillery.coords, {content: distillery.name});
+      callback(distillery);
     }
   });
   request.send();
@@ -53,7 +65,7 @@ var showMap = function(){
   var mainMap = new MapWrapper(container, center, zoom);
   var urlToOurApi = "http://localhost:3000/api/locations";
   makeRequest(urlToOurApi, (function(coords, content) {
-    mainMap.addMaker(coords, content);
+    mainMap.addMarker(coords, content);
   }));
 }
 
