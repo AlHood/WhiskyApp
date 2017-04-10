@@ -1,6 +1,4 @@
 //this is app.js
-var user = require('./models/user');
-
 // Google Map Stuff
 
 var MapWrapper = function(container, center, zoom){
@@ -54,8 +52,7 @@ var showMap = function(){
 var app = function(){
   //calls show map, this populates map and drops pins. we may look at moving some of this out to seperate models and views.
   showMap();
-  user = new User({name: "defaultUser"});
-  debugger;
+
 };
 
 window.onload = app;

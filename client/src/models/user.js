@@ -1,6 +1,6 @@
 //some basic layout of how a usershould look.
 // we will use this when we require access to the functions a user object will have. 
-var MongoClient = require('mongodb').MongoClient;
+// var MongoClient = require('mongodb').MongoClient;
 
 
 var User = function(options) {
@@ -10,25 +10,29 @@ var User = function(options) {
 }
 
 User.prototype = {
-  //will need some functions to push and remove from arrays. start with just being able to push in to bucket_list.
-  addBucket:function(location){
-
-
-    this.bucket_list.push(location.id);
-
-    this.user.updateUser;
-  },
-
-  removeBucket:function(location){
+  // will need some functions to push and remove from arrays. start with just being able to push in to bucket_list.
+  addBucket:function(id){
+if(this.includes(id) === false) {
+   bucket_list.push(id);}
 
   },
 
-  addVisited:function(location){
+  removeBucket:function(id){
+var index = this.bucket_list.findIndex(id);
+this.bucket_list.splice(index);
 
   },
 
-  removeVisited:function(location){
+  addVisited:function(id){
+    var index = this.bucket_list.findIndex(id);
+    var splice = this.bucket_list.splice(index);
+this.visited_list.push(splice);
 
+  },
+
+  removeVisited:function(id){
+    var index = this.visited_list.findIndex(id);
+    this.visited_list.splice(index);
   }
 
 }
