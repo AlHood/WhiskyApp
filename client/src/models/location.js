@@ -1,4 +1,5 @@
 var Location = function(options) {
+  this.id = options.id;
 this.name = options.name;
 this.location = options.location;
 this.region = options.region;
