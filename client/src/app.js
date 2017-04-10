@@ -11,14 +11,14 @@ var MapWrapper = function(container, center, zoom){
 };
 
 MapWrapper.prototype = {
-  addMaker: function(coords){
+  addMaker: function(coords, content){
     var marker = new google.maps.Marker({
       position: coords,
       map: this.googleMap
     });
-    var infoWindow = new google.maps.InfoWindow({content: "test"});
+    var infoWindow = new google.maps.InfoWindow(content);
     google.maps.event.addListener(marker, "click", function(){
-      console.log("clicked");
+      console.log(content);
       infoWindow.open(this.googleMap, marker);
 
     },this);
@@ -35,7 +35,7 @@ var makeRequest = function(url, callback){
     var jsonString = this.responseText;
     var whisky_distilleries = JSON.parse(jsonString);
     for(distillery of whisky_distilleries){
-      callback(distillery.coords);
+      callback(distillery.coords, {content: distillery.name});
     }
   });
   request.send();
@@ -52,8 +52,8 @@ var showMap = function(){
   var zoom = 7;
   var mainMap = new MapWrapper(container, center, zoom);
   var urlToOurApi = "http://localhost:3000/api/locations";
-  makeRequest(urlToOurApi, (function(coords) {
-    mainMap.addMaker(coords);
+  makeRequest(urlToOurApi, (function(coords, content) {
+    mainMap.addMaker(coords, content);
   }));
 }
 
