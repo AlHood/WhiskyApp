@@ -16,8 +16,10 @@ MapWrapper.prototype = {
       position: coords,
       map: this.googleMap
     });
+    var infoWindow = new google.maps.InfoWindow({content: "test"});
     google.maps.event.addListener(marker, "click", function(){
       console.log("clicked");
+      infoWindow.open(this.googleMap, marker);
 
     },this);
   }
