@@ -29,15 +29,23 @@
   <div class="tab">
     <button class="tablinks" onclick="">Bucket List</button>
     <button class="tablinks" onclick="">Visited</button>
-  </div>
+
 
   <div id="tabOne" class="tabcontentOne">
-    <p>Distillery Name and Region and a checked box</p>
+      <ul id="choosenDistilleries">
+          <li id="listItem">
+          <input type="checkbox"/><label id="onTheList"></label>
+          <button class="delete">Delete</button>
+          </li>
+      </ul>    
   </div>
 
   <div id="tabTwo" class="tabcontentTwo">
-    <h3>Distillery Name and a badge</h3>
+      <ul id="completedTours">
+          <li><input type="checkbox"checked><label></label></li>
+        </ul>
    
+  </div>
   </div>
 
   </div>

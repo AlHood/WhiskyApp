@@ -144,9 +144,14 @@ div.tab button.active {
     border-top: none;
 }
 
-
 .tablinks {
   font-family: 'Berkshire Swash', cursive;
   color: #FFD700;
   font-size: 16px;
+}
+
+
+#completedTours label {
+  text-decoration: line-through;
+  color: #888;
 }
