@@ -19,7 +19,7 @@ if(this.bucket_list.includes(id) === false) {
 
   removeBucket:function(id){
 var index = this.bucket_list.indexOf(id);
-this.bucket_list.splice(index);
+this.bucket_list.splice(index, 1);
 
   },
 
