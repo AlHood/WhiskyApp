@@ -12,27 +12,29 @@ var User = function(options) {
 User.prototype = {
   // will need some functions to push and remove from arrays. start with just being able to push in to bucket_list.
   addBucket:function(id){
-if(this.includes(id) === false) {
-   bucket_list.push(id);}
+if(this.bucket_list.includes(id) === false) {
+   this.bucket_list.push(id);}
 
   },
 
   removeBucket:function(id){
-var index = this.bucket_list.findIndex(id);
+var index = this.bucket_list.indexOf(id);
 this.bucket_list.splice(index);
 
   },
 
   addVisited:function(id){
-    var index = this.bucket_list.findIndex(id);
-    var splice = this.bucket_list.splice(index);
-this.visited_list.push(splice);
+    var index = this.bucket_list.indexOf(id);
+    var insert = (this.bucket_list.splice(index));
+    this.visited_list.push(insert[0]);
+
 
   },
 
   removeVisited:function(id){
-    var index = this.visited_list.findIndex(id);
-    this.visited_list.splice(index);
+    if(this.visited_list.includes(id)) {
+    var index = this.visited_list.indexOf(id);
+    this.visited_list.splice(index);}
   }
 
 }
