@@ -1,9 +1,13 @@
 var UI = require('./views/ui');
-
+var User = require('./models/user.js');
+var user;
+var user_id;
 
 
 //this is app.js
 // Google Map Stuff
+
+
 
 var MapWrapper = function(container, center, zoom){
   this.googleMap = new google.maps.Map(container, {
@@ -26,7 +30,12 @@ MapWrapper.prototype = {
     var website = document.createElement("a")
 
     // this will be used to push id to customers array.
-    button.onclick = function(){console.log(distillery.name)}
+    button.onclick = function(){user.addBucket(distillery._id);
+      console.log(user);
+      console.log(user_id);
+      makePutRequest("http://localhost:3000/api/users/" + user_id, user)
+    }
+
     header.innerText = distillery.name;
     description.innerText = distillery.description;
     website.innerText = distillery.website;
@@ -68,6 +77,7 @@ var makeRequest = function(url, callback){
 
 //the below function creates the map and puts it in the container, uses a an inner function to call addmarker on the mainmap and will take in coords when it is called, coords are provided when this function is used in makeRequest
 var showMap = function(){
+  makeRequestForUser("http://localhost:3000/api/users/");
   var urlToOurApi = "http://localhost:3000/api/locations";
   var container = document.getElementById("GoogleMap");
   var center = {
