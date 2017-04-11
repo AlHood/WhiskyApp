@@ -52,11 +52,17 @@ MapWrapper.prototype = {
 
     // this will be used to push id to customers array.
     button.onclick = function(){user.addBucket(distillery._id);
+
+// at this moment, we need to get the coords. maybe distillery.coords? 
+localStorage.setItem("prevCoords", JSON.stringify(distillery.coords) );
+
+
       console.log(user);
       console.log(user_id);
       makePutRequest("http://localhost:3000/api/users/"+user_id, user)
       // console.log(user_items[0]);
       console.log(user);
+      location.reload();
     }
 
     header.innerText = distillery.name;
@@ -149,10 +155,24 @@ var showMap = function(){
 
   var urlToOurApi = "http://localhost:3000/api/locations";
   var container = document.getElementById("GoogleMap");
-  var center = {
-    lat: 56.490671,
+
+// alternatively, this should load co-ords from local storage
+
+      var center= {
+      lat: 56.490671,
     lng: -4.202646
   };
+
+    var localStoragecenter = localStorage.getItem("prevCoords");
+
+
+if(localStoragecenter !== null) {
+console.log(localStoragecenter)
+  center = JSON.parse(localStoragecenter);
+  console.log(center);
+
+};
+
   var zoom = 7;
   var mainMap = new MapWrapper(container, center, zoom);
   var urlToOurApi = "http://localhost:3000/api/locations";
