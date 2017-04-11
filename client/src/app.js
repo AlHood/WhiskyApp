@@ -22,6 +22,14 @@ var makeRequestForUser = function(url, callback){
   request.send();
 };
 
+var makePutRequest = function(url, payload, callback){
+  console.log(payload);
+  var request = new XMLHttpRequest();
+  request.open("PUT", url);
+  request.setRequestHeader("Content-type", "application/json");
+  request.send(JSON.stringify(payload));
+}
+
 var MapWrapper = function(container, center, zoom){
   this.googleMap = new google.maps.Map(container, {
     center: center,
