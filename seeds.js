@@ -182,16 +182,4 @@ db.whisky_users.insert([
   name: "Colin",
   bucket_list: [],
   visited_list: []
-},{
-  name: "Ruth",
-  bucket_list: [],
-  visited_list: []
-},{
-  name: "Chris",
-  bucket_list: [],
-  visited_list: []
-},{
-  name: "Alastair",
-  bucket_list: [],
-  visited_list: []
 }])

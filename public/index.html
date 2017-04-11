@@ -22,23 +22,30 @@
      <button id="CurrentLocationBtn" type="submit">Current Location</button>
 
 
-     <input id="SearchLocation" placeholder="Search" onclick="newMap()"/>
+     <input id="SearchLocation" placeholder="Search" />
    
    <div id="bucket_list">
     
   <div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+    <button class="tablinks" onclick="">Bucket List</button>
+    <button class="tablinks" onclick="">Visited</button>
+
+
+  <div id="tabOne" class="tabcontentOne">
+      <ul id="choosenDistilleries">
+          <li id="listItem">
+          <input type="checkbox"/><label id="onTheList"></label>
+          <button class="delete">Delete</button>
+          </li>
+      </ul>    
   </div>
 
-  <div id="London" class="tabcontent">
-    <h3>London</h3>
-    <p>London is the capital city of England.</p>
+  <div id="tabTwo" class="tabcontentTwo">
+      <ul id="completedTours">
+          <li><input type="checkbox"checked><label></label></li>
+        </ul>
+   
   </div>
-
-  <div id="Paris" class="tabcontent">
-    <h3>Paris</h3>
-    <p>Paris is the capital of France.</p> 
   </div>
 
   </div>

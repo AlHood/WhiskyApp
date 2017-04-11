@@ -32,7 +32,7 @@ p {
   padding: 10px;
 }
 
-button {
+#CurrentLocationBtn {
   font-family: 'Crimson Text', serif;
   color: #6B7283;
   text-decoration: none;
@@ -46,13 +46,13 @@ button {
   margin-bottom: 15px;
 }
 
-button: hover {
+#CurrentLocationBtn: hover {
   background-color: transparent;
   border: 0.15em #FFD700 solid;
   color: #FFD700;
 }
 
-button: active {
+#CurrentLocationBtn: active {
   background-color: transparent;
   border: 0.15em #329bd8 solid;
   color: #329bd8;
@@ -90,7 +90,7 @@ margin-bottom: 15px;
 
 .CurrentLocationBtn{
   order:2;
-  flex-grow: 2;
+  flex-grow: 1;
 }
 
 .SearchLocation{
@@ -98,7 +98,7 @@ margin-bottom: 15px;
   flex-grow: 1;
 }
 
-.bucket_list {
+#bucket_list {
   order: 4;
   flex-grow: 1;
 }
@@ -142,5 +142,16 @@ div.tab button.active {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
 
+.tablinks {
+  font-family: 'Berkshire Swash', cursive;
+  color: #FFD700;
+  font-size: 16px;
+}
+
+
+#completedTours label {
+  text-decoration: line-through;
+  color: #888;
 }

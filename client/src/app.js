@@ -1,6 +1,8 @@
+var UI = require('./views/ui');
+
+
+
 //this is app.js
-
-
 // Google Map Stuff
 
 var MapWrapper = function(container, center, zoom){
@@ -83,6 +85,9 @@ var showMap = function(){
 var app = function(){
   //calls show map, this populates map and drops pins. we may look at moving some of this out to seperate models and views.
   showMap();
+
+  new UI();
+
 };
 
 window.onload = app;
