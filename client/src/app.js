@@ -7,7 +7,20 @@ var user_id;
 //this is app.js
 // Google Map Stuff
 
-
+var makeRequestForUser = function(url, callback){
+  var request = new XMLHttpRequest();
+  request.open("GET", url);
+  request.onload = (function(){
+    if (this.status !== 200){
+      return;
+    }
+    var jsonString = this.responseText;
+    var user_items = JSON.parse(jsonString);
+    user_id = user_items[0]._id;
+    user = new User(user_items[0]);
+  });
+  request.send();
+};
 
 var MapWrapper = function(container, center, zoom){
   this.googleMap = new google.maps.Map(container, {
@@ -33,7 +46,9 @@ MapWrapper.prototype = {
     button.onclick = function(){user.addBucket(distillery._id);
       console.log(user);
       console.log(user_id);
-      makePutRequest("http://localhost:3000/api/users/" + user_id, user)
+      makePutRequest("http://localhost:3000/api/users/"+user_id, user)
+      // console.log(user_items[0]);
+      console.log(user);
     }
 
     header.innerText = distillery.name;
@@ -78,6 +93,8 @@ var makeRequest = function(url, callback){
 //the below function creates the map and puts it in the container, uses a an inner function to call addmarker on the mainmap and will take in coords when it is called, coords are provided when this function is used in makeRequest
 var showMap = function(){
   makeRequestForUser("http://localhost:3000/api/users/");
+
+
   var urlToOurApi = "http://localhost:3000/api/locations";
   var container = document.getElementById("GoogleMap");
   var center = {
@@ -91,6 +108,7 @@ var showMap = function(){
     mainMap.addMarker(coords, content);
   }));
 }
+
 
 var app = function(){
   //calls show map, this populates map and drops pins. we may look at moving some of this out to seperate models and views.
