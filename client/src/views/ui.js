@@ -38,12 +38,9 @@ var showBucketItem = function(location){
   var name = document.createElement('p');
   name.className = 'distillery_name';
   name.innerText = location.name;
-  var button = document.createElement('button');
-  button.innerText = 'add';
-
   
   listItem.appendChild(name);
-  listItem.appendChild(button);
+
   bucketList.appendChild(listItem);
 };
 
