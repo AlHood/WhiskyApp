@@ -115,6 +115,15 @@ var showMap = function(){
   makeRequest(urlToOurApi, (function(coords, content) {
     mainMap.addMarker(coords, content);
   }));
+  
+  document.querySelector("#CurrentLocationBtn").addEventListener('click', function(){
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var coords = { lat: position.coords.latitude , lng: position.coords.longitude }
+        console.log(coords);
+        mainMap.googleMap.setCenter(coords);
+        mainMap.googleMap.setZoom(9)
+      });
+    });
 }
 
 
