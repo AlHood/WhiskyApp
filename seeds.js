@@ -127,8 +127,8 @@ db.whisky_distilleries.insert([
   website: '.',
   image: ".",
   coords:{
-    lat: null,
-    lng: null
+    lat: 55.260702,
+    lng: -4.833403
   }
 },
 {
