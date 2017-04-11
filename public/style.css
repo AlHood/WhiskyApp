@@ -8,6 +8,21 @@ section {
      display: flex;
   }
 
+  h1 {
+    font-family: 'Berkshire Swash', cursive;
+    color: #FFD700;
+    font-size: 28px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-family: 'Crimson Text', serif;
+    color:#FFD700;
+    font-size: 17px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
 
 #GoogleMap {
     height: 100vh;
@@ -16,21 +31,6 @@ section {
     flex: 2; 
   }
   
-h1 {
-  font-family: 'Berkshire Swash', cursive;
-  color: #FFD700;
-  font-size: 28px;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
-p {
-  font-family: 'Crimson Text', serif;
-  color:#FFD700;
-  font-size: 17px;
-  margin-bottom: 15px;
-  padding: 10px;
-}
 
 #CurrentLocationBtn {
   font-family: 'Crimson Text', serif;
@@ -57,7 +57,8 @@ p {
   border: 0.15em #329bd8 solid;
   color: #329bd8;
 }
-
+ 
+/*//search box */
 input {
 font-family: 'Crimson Text', serif;
 color: black;
@@ -70,6 +71,7 @@ padding: 1em 3em;
 border-size: 1px;
 font-weight: bold;
 margin-bottom: 15px;
+width: 148px;
 }
 
 
@@ -98,7 +100,7 @@ margin-bottom: 15px;
   flex-grow: 1;
 }
 
-#bucket_list {
+#tab {
   order: 4;
   flex-grow: 1;
 }
@@ -108,54 +110,33 @@ margin-bottom: 15px;
   flex-grow: 1;
 }
 
-/* Style the tab */
-div.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-div.tab button {
-    background-color: inherit;
-   /* float: left;*/
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-div.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-div.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-.tablinks {
+#bucketList {
   font-family: 'Berkshire Swash', cursive;
   color: #FFD700;
-  font-size: 16px;
+  font-size: 40px;
+  margin: 7px;
 }
 
+#tab {
+  border-radius: 8px 100px 8px 100px;
+  border: 5px solid #000000;
+  border: 10px solid #ccc;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
 
-#completedTours label {
-  text-decoration: line-through;
-  color: #888;
+ul {
+  list-style: none;
+  font-family: 'Berkshire Swash', cursive;
+  color: #FFD700;
+  font-size: 20px;
+  font-weight: solid
 }
 
 .distillery_name{
   display: inline;
+  font-family: 'Berkshire Swash', cursive;
+  color: #FFD700;
+  font-size: 20px;
+  font-weight: solid
 }
