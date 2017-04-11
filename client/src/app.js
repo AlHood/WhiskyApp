@@ -20,12 +20,23 @@ MapWrapper.prototype = {
     var div = document.createElement("div");
     var header = document.createElement('h1');
     var button = document.createElement("button")
+    var description = document.createElement("p")
+    var website = document.createElement("a")
+
     // this will be used to push id to customers array.
     button.onclick = function(){console.log(distillery.name)}
     header.innerText = distillery.name;
+    description.innerText = distillery.description;
+    website.innerText = distillery.website;
+    website.href = distillery.website;
+    button.innerText = "Add to bucketlist";
     button.id = distillery._id;
+
     div.appendChild(header);
+    div.appendChild(description);
+    div.appendChild(website);
     div.appendChild(button);
+
 
     var infoWindow = new google.maps.InfoWindow({content: div});
     google.maps.event.addListener(marker, "click", function(){
