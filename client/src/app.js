@@ -60,15 +60,17 @@ GeoCoder.prototype = {
     var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address;
 
     var geoCoderThis = this;
-    makeRequest(url, function(){   
+    // console.log(geoCoderThis);
+    geoCodeMakeRequest(url, function(){   
       // console.log(this.responseText);
       var resultsObj = JSON.parse(this.responseText);
        
       var coords = resultsObj.results[0].geometry.location;
       geoCoderThis.mapWrapper.googleMap.setCenter(coords);
       // debugger;
-    });
+    // });
   }
+
 };
 
 var searchButtonClick = function(mainMap){
@@ -79,6 +81,14 @@ var searchButtonClick = function(mainMap){
 
   var gc = new GeoCoder(address, mainMap);
   gc.geoCode();
+};
+
+
+var geoCodeMakeRequest = function(url, callback){
+  var xhr = new XMLHttpRequest();
+  xhr.onload = callback;
+  xhr.open("GET", url);
+  xhr.send();
 };
 
 
@@ -114,6 +124,15 @@ var showMap = function(){
   makeRequest(urlToOurApi, (function(coords, content) {
     mainMap.addMarker(coords, content);
   }));
+
+  var searchLocation = document.querySelector("#SearchLocation");
+  
+  searchLocation.onkeypress = function(){
+if(event.which ==13){
+    searchButtonClick(mainMap); //this line isn't working. How do I refer to the mapwrapper object in teh above showMap function?
+  }
+}
+
 }
 
 var app = function(){
@@ -122,9 +141,7 @@ var app = function(){
 
   new UI();
 
-  var searchButton = document.querySelector("#SearchButton");
-  searchButton.onclick = function(){
-    searchButtonClick(mainMap); //this line isn't working. How do I refer to the mapwrapper object in teh above showMap function?
+  
 
 };
 
