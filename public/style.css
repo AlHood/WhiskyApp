@@ -155,3 +155,7 @@ div.tab button.active {
   text-decoration: line-through;
   color: #888;
 }
+
+.distillery_name{
+  display: inline;
+}

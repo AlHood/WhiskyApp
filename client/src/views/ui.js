@@ -34,37 +34,35 @@ var makeRequestForLocation = function(url, callback){
 var showBucketItem = function(location){
   console.log(location);
   var bucketList = document.getElementById("listDistilleries");
-  var name = document.getElementById("listItem");
-  
+  var listItem = document.createElement('li');
+  var name = document.createElement('p');
+  name.className = 'distillery_name';
   name.innerText = location.name;
-  bucketList.appendChild(name);
+  var button = document.createElement('button');
+  button.innerText = 'add';
+
+  
+  listItem.appendChild(name);
+  listItem.appendChild(button);
+  bucketList.appendChild(listItem);
 };
 
 var populateBucketList = function(location){
+
+  console.log(location);
   console.log(location.name);
+
   var bucketList = document.getElementById("listDistilleries");
   var locationsUrl = "http://localhost:3000/api/locations/";
-   var listItem = document.createElement("li");
-   var label = document.createElement("label");
-   label.setText = location;
-   var deleteButton = document.createElement("button");
-   var addButton = document.createElement("button");
 
-   deleteButton.innerText="Delete";
-   deleteButton.className="delete";
-
-   listItem.appendChild(label);
-   listItem.appendChild(deleteButton);
-   listItem.appendChild(addButton);
-    bucketList.appendChild(listItem);
-  // for (distilleryid of user_picks){
-  //   makeRequestForLocation(locationsUrl + distilleryid, showBucketItem);
-  // }
+  for(distilleryid of location.bucket_list){
+    makeRequestForLocation(locationsUrl + distilleryid, showBucketItem);
+  }
 };
 
 // //New distillery item
 // var createEachPickedElement=function(location){
-  
+
 //   return ui;
 // };
 
@@ -72,18 +70,16 @@ var populateBucketList = function(location){
 var populateVisitedList = function(){
   var completedTours= document.getElementById("completedTours");
   var listItem = this.parentNode;
-     for (var i=0; i< completedTours.children.length; i++){
-       bindTaskEvents(completedTours.children[i]);
-     };
-        completedTours.appendChild(listItem);
-        bindTaskEvents(listItem, toDoList);
+  for (var i=0; i< completedTours.children.length; i++){
+   bindTaskEvents(completedTours.children[i]);
+ };
+ completedTours.appendChild(listItem);
+ bindTaskEvents(listItem, toDoList);
 };
 
 
 var UI = function(){
-  var thethingy = document.getElementById("tabOne");
   // thethingy.innerHTML = '';
-  console.log('hi');
   // populateVisitedList();
   // populateBucketList();
   makeRequestForUser("http://localhost:3000/api/users/", populateBucketList);
