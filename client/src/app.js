@@ -38,6 +38,21 @@ var MapWrapper = function(container, center, zoom){
 };
 
 MapWrapper.prototype = {
+  addYouareHere: function(coords){
+    console.log(coords);
+    var marker = new google.maps.Marker({
+      position: coords,
+      map: this.googleMap
+    });
+
+    var circle = new google.maps.Circle({
+      map: this.googleMap,
+      radius: 16*1000,    // 10 miles in metres
+      fillColor: '#ffd700'
+    });
+    circle.bindTo('center', marker, 'position');
+
+  },
   addMarker: function(distillery){
     var marker = new google.maps.Marker({
       position: distillery.coords,
@@ -52,11 +67,17 @@ MapWrapper.prototype = {
 
     // this will be used to push id to customers array.
     button.onclick = function(){user.addBucket(distillery._id);
-      console.log(user);
-      console.log(user_id);
-      makePutRequest("http://localhost:3000/api/users/"+user_id, user)
+
+// at this moment, we need to get the coords. maybe distillery.coords? 
+localStorage.setItem("prevCoords", JSON.stringify(distillery.coords) );
+
+
+console.log(user);
+console.log(user_id);
+makePutRequest("http://localhost:3000/api/users/"+user_id, user)
       // console.log(user_items[0]);
       console.log(user);
+      location.reload();
     }
 
     header.innerText = distillery.name;
@@ -96,7 +117,7 @@ GeoCoder.prototype = {
     geoCodeMakeRequest(url, function(){   
       // console.log(this.responseText);
       var resultsObj = JSON.parse(this.responseText);
-       
+
       var coords = resultsObj.results[0].geometry.location;
       geoCoderThis.mapWrapper.googleMap.setCenter(coords);
       // debugger;
@@ -149,35 +170,54 @@ var showMap = function(){
 
   var urlToOurApi = "http://localhost:3000/api/locations";
   var container = document.getElementById("GoogleMap");
-  var center = {
-    lat: 56.490671,
-    lng: -4.202646
-  };
-  var zoom = 7;
-  var mainMap = new MapWrapper(container, center, zoom);
-  var urlToOurApi = "http://localhost:3000/api/locations";
-  makeRequest(urlToOurApi, (function(coords, content) {
-    mainMap.addMarker(coords, content);
-  }));
+
+// alternatively, this should load co-ords from local storage
+
+var center= {
+  lat: 56.490671,
+  lng: -4.202646
+};
+
+var localStoragecenter = localStorage.getItem("prevCoords");
+
+
+if(localStoragecenter !== null) {
+  console.log(localStoragecenter)
+  center = JSON.parse(localStoragecenter);
+  console.log(center);
+
+};
+
+var zoom = 7;
+var mainMap = new MapWrapper(container, center, zoom);
+var urlToOurApi = "http://localhost:3000/api/locations";
+makeRequest(urlToOurApi, (function(coords, content) {
+  mainMap.addMarker(coords, content);
+}));
 
   // Care, functions beginning searchLocation.onkeypress = function(){
 // and    document.querySelector("#CurrentLocationBtn").addEventListener('click', function(){
 // were added at teh same time. Check for conflicts.
-  var searchLocation = document.querySelector("#SearchLocation");
-  searchLocation.onkeypress = function(){
-if(event.which ==13){
+var searchLocation = document.querySelector("#SearchLocation");
+searchLocation.onkeypress = function(){
+  if(event.which ==13){
     searchButtonClick(mainMap); //this line isn't working. How do I refer to the mapwrapper object in teh above showMap function?
   }
 };
 
-  document.querySelector("#CurrentLocationBtn").addEventListener('click', function(){
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var coords = { lat: position.coords.latitude , lng: position.coords.longitude }
-        console.log(coords);
-        mainMap.googleMap.setCenter(coords);
-        mainMap.googleMap.setZoom(9)
-      });
-    });
+document.querySelector("#CurrentLocationBtn").addEventListener('click', function(){
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var coords = { lat: position.coords.latitude , lng: position.coords.longitude }
+    console.log(coords);
+    mainMap.googleMap.setCenter(coords);
+    mainMap.googleMap.setZoom(9);
+    mainMap.addYouareHere(coords);
+  });
+  // debugger;
+
+
+});
+
 };
 
 
