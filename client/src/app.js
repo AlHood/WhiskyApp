@@ -48,6 +48,40 @@ MapWrapper.prototype = {
     },this);
   }
 }
+
+
+var GeoCoder = function(address, mapWrapper){
+  this.mapWrapper =  mapWrapper;
+  this.address = address;
+};
+
+GeoCoder.prototype = {
+  geoCode: function(){
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + this.address;
+
+    var geoCoderThis = this;
+    makeRequest(url, function(){   
+      // console.log(this.responseText);
+      var resultsObj = JSON.parse(this.responseText);
+       
+      var coords = resultsObj.results[0].geometry.location;
+      geoCoderThis.mapWrapper.googleMap.setCenter(coords);
+      // debugger;
+    });
+  }
+};
+
+var searchButtonClick = function(mainMap){
+  console.log("clicked");
+  var input = document.querySelector('#SearchLocation');
+  var address = input.value;
+  // debugger;
+
+  var gc = new GeoCoder(address, mainMap);
+  gc.geoCode();
+};
+
+
 //this function will make a call to our api, get all distilleries and use the callback provide to drop markers for them all on the mainmap.
 var makeRequest = function(url, callback){
   var request = new XMLHttpRequest();
@@ -87,6 +121,10 @@ var app = function(){
   showMap();
 
   new UI();
+
+  var searchButton = document.querySelector("#SearchButton");
+  searchButton.onclick = function(){
+    searchButtonClick(mainMap); //this line isn't working. How do I refer to the mapwrapper object in teh above showMap function?
 
 };
 

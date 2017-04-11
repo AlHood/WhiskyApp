@@ -117,6 +117,9 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
       checkBox.onchange = checkBoxEventHandler;
 };
 
+
+
+
 var UI = function(){
   var thethingy = document.getElementById("tabOne");
   // thethingy.innerHTML = '';
