@@ -98,7 +98,7 @@ width: 148px;
 
 .SearchLocation{
   order: 3;
-  flex-grow: 1;
+  flex-grow: 1
 }
 
 #tab {
@@ -106,7 +106,7 @@ width: 148px;
   flex-grow: 1;
 }
 
-.progress_bar {
+#socialmediabar {
   order: 5;
   flex-grow: 1;
 }
@@ -141,3 +141,14 @@ ul {
   font-size: 20px;
   font-weight: solid
 }
+
+#socialmediabar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+img {
+  padding: 5px;
+}
+
