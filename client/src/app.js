@@ -62,6 +62,7 @@ MapWrapper.prototype = {
     });
 
     var div = document.createElement("div");
+    div.classList.add("infowindowdiv");
     var header = document.createElement('h1');
     var button = document.createElement("button")
     var description = document.createElement("p")
