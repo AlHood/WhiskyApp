@@ -154,7 +154,11 @@ ul {
   margin-top: 5px;
 }
 
-img {
+.socialicons {
   padding: 5px;
+  background: white;
+  border: 5px solid grey;
+  /* box-sizing: border-box; */
+  border-radius: 150px;
 }
 
