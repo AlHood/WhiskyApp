@@ -1,36 +1,42 @@
-/*// think about expanding the website to mobile screen*/ 
 body {
   margin: 1px;
   background-color: #6B7283;
 }
 
 section {
-     display: flex;
-  }
+ display: flex;
+}
 
-  h1 {
-    font-family: 'Berkshire Swash', cursive;
-    color: #FFD700;
-    font-size: 28px;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
+.infowindowdiv{
+ overflow: scroll;
+ width: 300px
+ height: 100px;
+}
 
-  p {
-    font-family: 'Crimson Text', serif;
-    color:#FFD700;
-    font-size: 17px;
-    margin-bottom: 15px;
-    padding: 10px;
-  }
+
+p {
+  font-family: 'Crimson Text', serif;
+  color:#FFD700;
+  font-size: 17px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#main {
+  font-family: 'Berkshire Swash', cursive;
+  color: #FFD700;
+  font-size: 28px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
 
 #GoogleMap {
-    height: 100vh;
-    width: 70vw;
-    display: flex;
-    flex: 2; 
-  }
-  
+  height: 100vh;
+  width: 70vw;
+  display: flex;
+  flex: 2; 
+}
+
 
 #CurrentLocationBtn {
   font-family: 'Crimson Text', serif;
@@ -57,25 +63,30 @@ section {
   border: 0.15em #329bd8 solid;
   color: #329bd8;
 }
- 
+
 /*//search box */
 input {
-font-family: 'Crimson Text', serif;
-color: black;
-text-decoration: none;
-text-transform: uppercase;
-background-color: white;
-font-style: 17px;
-border-radius: 10px;
-padding: 1em 3em;
-border-size: 1px;
-font-weight: bold;
-margin-bottom: 15px;
-width: 148px;
+  font-family: 'Crimson Text', serif;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: white;
+  font-style: 17px;
+  border-radius: 10px;
+  padding: 1em 3em;
+  border-size: 1px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  width: 148px;
 }
 
 
 #infobar{
+
+  background-image: url("images/background.jpg");
+
+
+
   display: flex;
   flex:1 ;
   flex-direction: column;
@@ -97,7 +108,7 @@ width: 148px;
 
 .SearchLocation{
   order: 3;
-  flex-grow: 1;
+  flex-grow: 1
 }
 
 #tab {
@@ -105,7 +116,7 @@ width: 148px;
   flex-grow: 1;
 }
 
-.progress_bar {
+#socialmediabar {
   order: 5;
   flex-grow: 1;
 }
@@ -118,10 +129,11 @@ width: 148px;
 }
 
 #tab {
+  background-color: rgba(150, 150, 150, 0.4);
   border-radius: 8px 100px 8px 100px;
   border: 5px solid #000000;
   border: 10px solid #ccc;
-  background-color: #f1f1f1;
+
   padding: 20px 10px;
 }
 
@@ -139,4 +151,18 @@ ul {
   color: #FFD700;
   font-size: 20px;
   font-weight: solid
+}
+
+#socialmediabar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.socialicons {
+  padding: 5px;
+  background: white;
+  border: 5px solid grey;
+  /* box-sizing: border-box; */
+  border-radius: 150px;
 }
