@@ -10,8 +10,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Tours run Monday to Friday at 10am, 11:30am, 1:30pm & 3pm and Saturdays at 10am & 2pm.",
   cost: "£7 per person",
   website: 'http://www.springbankwhisky.com',
-  image: ".",
-
+  image: "http://localhost:3000/images/abhainn_logo.jpg",
   coords:{
 
     lat: 55.425439,
@@ -26,7 +25,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Bespoke tours on request - book through website to avoid disappointment.",
   cost: "£8 per person",
   website: 'https://www.thedalmore.com',
-  image: ".",
+  image: "http://localhost:3000/images/dalmore_logo.jpg",
   coords:{
     lat: 57.688252,
     lng: -4.239218
@@ -40,7 +39,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Monday – Saturday: 9.30am – 5.00pm, Tours throughout the day, last tour at 4pm",
   cost: "£7 per person",
   website: 'https://www.discovering-distilleries.com/talisker/',
-  image: ".",
+  image: "http://localhost:3000/images/talisker_logo.jpg",
   coords:{
     lat: 57.302336,
     lng: -6.356749
@@ -54,7 +53,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Mon-Fri 10am-5pm, Tours on the hour every hour until 4pm, Closed weekends",
   cost: "£7.50 per person",
   website: 'https://www.highlandparkwhisky.com/',
-  image: ".",
+  image: "http://localhost:3000/images/highlandpark_logo.jpg",
   coords:{
     lat: 58.973751,
     lng: -2.953371
@@ -68,7 +67,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Monday – Saturday: 10:00 – 16:30 Sunday: Closed Tour: Every day 11:00 & 14:00, Monday – Saturday Please book onto the tours in advance to avoid disappointment.",
   cost: "Distillery tours are £6. No children under eight years of age allowed in production areas.",
   website: 'http://www.jurawhisky.com',
-  image: ".",
+  image: "http://localhost:3000/images/jura_logo.jpg",
   coords:{
     lat: 55.832908,
     lng: -5.950832
@@ -82,7 +81,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Times 10.00, 11.00, 12.00, 13.00, 14.00, 15.00, 16.00 Duration: 45mins.",
   cost: "Cost £8.00 Concessions £7.00 Children 8-17 Free ",
   website: 'https://www.arranwhisky.com',
-  image: ".",
+  image: "http://localhost:3000/images/arran_logo.jpg",
   coords:{
     lat: 55.698241,
     lng: -5.275240
@@ -96,7 +95,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Mondays to Fridays 10am-5pm Saturdays and Sundays 10am-4pm",
   cost: "£8 per person",
   website: 'http://tobermorydistillery.com',
-  image: ".",
+  image: "http://localhost:3000/images/tobermory_logo.jpeg",
   coords:{
     lat: 56.620734,
     lng: -6.069800
@@ -111,7 +110,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Mon - Sat: 9.30am / 10:30am / 1.30pm / 2.30pm  Sun:  12.30pm / 2pm",
   cost: "£7 per person",
   website: 'http://www.bowmore.com',
-  image: ".",
+  image: "http://localhost:3000/images/bowmore_logo.jpg",
   coords:{
     lat: 55.756868,
     lng: -6.289846
@@ -124,7 +123,7 @@ db.whisky_distilleries.insert([
   description: "Ailsa Bay was built within Girvan grain distillery in 2007 to produce malt whisky for William Grant's range of blends. The first single malt, a heavily peated no-age-statement release, was launched in February 2016, after eight years of operation.",
   tourInfo: "Mon - Sat: 9.30am / 10:30am / 1.30pm / 2.30pm Sun:  12.30pm / 2pm",
   cost: "£7 per person",
-  website: '.',
+  website: 'http://localhost:3000/images/aislabay_logo.jpg',
   image: ".",
   coords:{
     lat: 55.260702,
@@ -139,7 +138,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Daily 9:30am - 4:00pm DURATION: 1 Hour 30 Minutes",
   cost: "£10",
   website: 'http://www.glenfiddich.com/distillery/',
-  image: ".",
+  image: "http://localhost:3000/images/glenfiddich_logo.jpg",
   coords:{
     lat: 57.454765,
     lng: -3.128660
@@ -153,7 +152,7 @@ db.whisky_distilleries.insert([
   tourInfo: "TIMES: Monday to Friday 9.30am-5.00pm DURATION: Tour duration: approx. 1 hour 45 minutes.",
   cost: "COST: Price per person - £15",
   website: 'https://www.themacallan.com/visit#',
-  image: ".",
+  image: "http://localhost:3000/images/themacallanlogo.jpg",
   coords:{
     lat: 57.484647,
     lng: -3.206955
@@ -167,7 +166,7 @@ db.whisky_distilleries.insert([
   tourInfo: "DURATION: 1 ¼ hours* Departs every 30 minutes from 10am, last tour at 4.30pm",
   cost: "PRICE: £10.00",
   website: 'https://www.theglenlivet.com',
-  image: ".",
+  image: "http://localhost:3000/images/the_glenlivet_logo.jpg",
   coords:{
     lat: 57.343908,
     lng: -3.337552
@@ -181,7 +180,7 @@ db.whisky_distilleries.insert([
   tourInfo: "The Classic Tour last 1 hour however there is various in-depth tours on offer",
   cost: "PRICE: £10.00",
   website: 'http://www.auchentoshan.com',
-  image: ".",
+  image: "http://localhost:3000/images/auchentoshan_logo.jpg",
   coords:{
     lat: 55.922313,
     lng: -4.439655
@@ -195,7 +194,7 @@ db.whisky_distilleries.insert([
   tourInfo: "April to October, Mon - Sat 10am to 5pm. Tour duration 1 Hour",
   cost: "PRICE: Adult £7.50 Children (12-17 years) £2.50",
   website: 'http://www.edradour.com/',
-  image: ".",
+  image: "http://localhost:3000/images/edradour-distillery-logo.jpg",
   coords:{
     lat: 56.701458,
     lng: -3.701010
@@ -209,7 +208,7 @@ db.whisky_distilleries.insert([
   tourInfo: "The Classic Tour is 1 hour duration - just turn up! Jan - March (Monday to Friday 10am – 4pm), April - Sept (Monday to Saturday 9.30am – 5pm), Oct - Dec (Monday to Friday 10am – 4pm). Other types of tours are avaiable.",
   cost: "Price: £6.00 per person " ,
   website: 'http://www.benromach.com/',
-  image: ".",
+  image: "http://localhost:3000/images/benromach_logo.jpg",
   coords:{
     lat: 57.613608,
     lng: -3.620026
@@ -223,7 +222,7 @@ db.whisky_distilleries.insert([
   tourInfo: "The Distillery Tour & Wee Taste is 1 hour duration. March - 7th April (11am Monday - Friday), 10th April - end October (11am Monday - Sunday), November (11am Monday - Friday), 23rd January – 7th April (3pm Monday – Friday), 10th April – end October (3pm Monday – Sunday )",
   cost: "Price: £6.00 per person " ,
   website: 'https://www.ardbeg.com',
-  image: ".",
+  image: "http://localhost:3000/images/ardbeg_logo.jpg",
   coords:{
     lat: 55.642079,
     lng: -6.112060
@@ -237,7 +236,7 @@ db.whisky_distilleries.insert([
   tourInfo: "Summer tours - Monday to Saturday between 11am - 1pm and 2pm - 4pm. Winter tours Monday to Friday - between 11am - 1pm and 2pm - 4pm.",
   cost: "Price: £5.00 per person, children go free. 30 mins tour" ,
   website: 'http://www.abhainndearg.co.uk/',
-  image: ".",
+  image: "http://localhost:3000/images/abhainn_logo.jpg",
   coords:{
     lat: 58.176065,
     lng: -7.048035
