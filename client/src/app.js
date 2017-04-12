@@ -65,8 +65,11 @@ MapWrapper.prototype = {
     div.classList.add("infowindowdiv");
     var header = document.createElement('h1');
     var button = document.createElement("button")
-    var description = document.createElement("p")
+    var description = document.createElement("p") 
+    var tourInfo = document.createElement("p") 
     var website = document.createElement("a")
+    
+
 
     // this will be used to push id to customers array.
     button.onclick = function(){user.addBucket(distillery._id);
@@ -86,14 +89,21 @@ makePutRequest("http://localhost:3000/api/users/"+user_id, user)
     header.innerText = distillery.name;
     description.innerText = distillery.description;
     website.innerText = distillery.website;
-    website.href = distillery.website;
     button.innerText = "Add to bucketlist";
+    tourInfo.innerText = distillery.tourInfo;
+    website.href = distillery.website;
     button.id = distillery._id;
+    
+
+    
 
     div.appendChild(header);
     div.appendChild(description);
+    div.appendChild(tourInfo);
     div.appendChild(website);
     div.appendChild(button);
+    
+    
 
 
     var infoWindow = new google.maps.InfoWindow({content: div});

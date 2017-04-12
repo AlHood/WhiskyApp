@@ -9,8 +9,9 @@ section {
 }
 .infowindowdiv{
   overflow: scroll;
-  width: 100px;
-  height: 200px;  }
+  width: 300px
+  height: 100px;
+    }
 
 
   p {
