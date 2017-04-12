@@ -42,7 +42,8 @@ MapWrapper.prototype = {
     console.log(coords);
     var marker = new google.maps.Marker({
       position: coords,
-      map: this.googleMap
+      map: this.googleMap,
+      icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
     });
 
     var circle = new google.maps.Circle({
