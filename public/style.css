@@ -8,13 +8,6 @@ section {
      display: flex;
   }
 
-  h1 {
-    font-family: 'Berkshire Swash', cursive;
-    color: #FFD700;
-    font-size: 28px;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
 
   p {
     font-family: 'Crimson Text', serif;
@@ -22,6 +15,14 @@ section {
     font-size: 17px;
     margin-bottom: 15px;
     padding: 10px;
+  }
+
+  #main {
+    font-family: 'Berkshire Swash', cursive;
+    color: #FFD700;
+    font-size: 28px;
+    padding: 10px;
+    margin-bottom: 15px;
   }
 
 #GoogleMap {
