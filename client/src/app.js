@@ -57,7 +57,8 @@ MapWrapper.prototype = {
   addMarker: function(distillery){
     var marker = new google.maps.Marker({
       position: distillery.coords,
-      map: this.googleMap
+      map: this.googleMap,
+      icon: "http://localhost:3000/images/whiskyGlass.png"
     });
 
     var div = document.createElement("div");
