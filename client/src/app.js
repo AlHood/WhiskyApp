@@ -187,8 +187,8 @@ var showMap = function(){
 // alternatively, this should load co-ords from local storage
 
 var center= {
-  lat: 56.490671,
-  lng: -4.202646
+  lat: 57.091799,
+  lng: -4.735828,
 };
 
 var localStoragecenter = localStorage.getItem("prevCoords");

@@ -1,5 +1,5 @@
-var locations = require('../client/src/models/locations');
-var Location = require('../client/src/models/location');
+// var locations = require('../client/src/models/locations');
+// var Location = require('../client/src/models/location');
 
 var express = require('express');
 var locationRouter = express.Router();
